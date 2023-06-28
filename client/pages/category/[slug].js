@@ -89,9 +89,9 @@ export default Category;
 export const getStaticPaths = async () => {
   const category = await fetchDataFromAPi("/api/categories?populate=*");
 
-  const paths = category.data.map((C) => ({
+  const paths = category.data.map((c) => ({
     params: {
-      slug: C.attributes.slug,
+      slug: c.attributes.slug,
     },
   }));
 
